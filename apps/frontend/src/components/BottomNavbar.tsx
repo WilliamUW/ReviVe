@@ -2,7 +2,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Flex, Box, Icon } from "@chakra-ui/react";
-import { FaHome, FaRecycle, FaTools, FaShoppingCart } from "react-icons/fa";
+import { FaHome, FaRecycle, FaTools, FaShoppingCart, FaInfoCircle } from "react-icons/fa";
+import {FaNoteSticky, FaNotesMedical} from "react-icons/fa6";
 
 const BottomNavbar = () => (
   <Flex
@@ -39,6 +40,12 @@ const BottomNavbar = () => (
       <Box textAlign="center">
         <Icon as={FaShoppingCart} w={6} h={6} />
         <Box>Buy</Box>
+      </Box>
+    </Link>
+    <Link to="/about">
+      <Box textAlign="center">
+        <Icon as={FaInfoCircle} w={6} h={6} />
+        <Box>About</Box>
       </Box>
     </Link>
   </Flex>

@@ -11,30 +11,8 @@ import {
 import { lightTheme } from "./theme";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import AppRouter from "./Router";
-import BottomNavbar from "./components/BottomNavbar";
 import { UserProvider } from "./components/UserContext";
 
-const old = () => (
-  <>
-    <Flex flex={1}>
-      <Container
-        mt={{ base: 4, md: 10 }}
-        maxW={"container.xl"}
-        mb={{ base: 4, md: 10 }}
-        display={"flex"}
-        flex={1}
-        alignItems={"center"}
-        justifyContent={"flex-start"}
-        flexDirection={"column"}
-      >
-        <InfoCard />
-        <Instructions />
-        <Dropzone />
-      </Container>
-    </Flex>
-    <Footer />
-  </>
-);
 
 // RECaptcha V3 site key (https://developers.google.com/recaptcha/docs/v3)
 const VITE_RECAPTCHA_V3_SITE_KEY = import.meta.env

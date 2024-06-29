@@ -7,6 +7,7 @@ import BottomNavbar from "./components/BottomNavbar";
 import SellPage from "./pages/Sell";
 import BuyPage from "./pages/Buy";
 import BrokenElectronic from "./pages/Broken";
+import About from "./pages/About";
 
 const AppRouter = () => (
   <>
@@ -16,6 +17,7 @@ const AppRouter = () => (
       <Route path="/unused" element={<Unused />} />
       <Route path="/broken" element={<BrokenElectronic />} />
       <Route path="/buy" element={<BuyPage />} />
+      <Route path="/about" element={<About />} />
     </Routes>
     <BottomNavbar />
   </>
