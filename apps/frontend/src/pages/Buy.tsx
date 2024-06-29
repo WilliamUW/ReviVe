@@ -22,6 +22,7 @@ import {
   RangeSliderTrack,
   RangeSliderFilledTrack,
   RangeSliderThumb,
+  HStack,
 } from "@chakra-ui/react";
 import { useUserContext } from "../components/UserContext";
 import { DeviceListing } from "../utils/deviceHelpers";
@@ -113,48 +114,49 @@ export default function Buy() {
             <RangeSliderThumb index={0} />
             <RangeSliderThumb index={1} />
           </RangeSlider>
+          <HStack spacing={4} align="center">
+            <Select
+              placeholder="Select Model"
+              value={selectedModel}
+              onChange={(e) => setSelectedModel(e.target.value)}
+              marginBottom={4}
+            >
+              <option value="">All</option>
+              {uniqueModels.map((model) => (
+                <option key={model} value={model}>
+                  {model}
+                </option>
+              ))}
+            </Select>
 
-          <Select
-            placeholder="Select Model"
-            value={selectedModel}
-            onChange={(e) => setSelectedModel(e.target.value)}
-            marginBottom={4}
-          >
-            <option value="">All</option>
-            {uniqueModels.map((model) => (
-              <option key={model} value={model}>
-                {model}
-              </option>
-            ))}
-          </Select>
+            <Select
+              placeholder="Select Quality"
+              value={selectedQuality}
+              onChange={(e) => setSelectedQuality(e.target.value)}
+              marginBottom={4}
+            >
+              <option value="">All</option>
+              {uniqueQualities.map((quality) => (
+                <option key={quality} value={quality}>
+                  {quality}
+                </option>
+              ))}
+            </Select>
 
-          <Select
-            placeholder="Select Quality"
-            value={selectedQuality}
-            onChange={(e) => setSelectedQuality(e.target.value)}
-            marginBottom={4}
-          >
-            <option value="">All</option>
-            {uniqueQualities.map((quality) => (
-              <option key={quality} value={quality}>
-                {quality}
-              </option>
-            ))}
-          </Select>
-
-          <Select
-            placeholder="Select Location"
-            value={selectedLocation}
-            onChange={(e) => setSelectedLocation(e.target.value)}
-            marginBottom={4}
-          >
-            <option value="">All</option>
-            {uniqueLocations.map((location) => (
-              <option key={location} value={location}>
-                {location}
-              </option>
-            ))}
-          </Select>
+            <Select
+              placeholder="Select Location"
+              value={selectedLocation}
+              onChange={(e) => setSelectedLocation(e.target.value)}
+              marginBottom={4}
+            >
+              <option value="">All</option>
+              {uniqueLocations.map((location) => (
+                <option key={location} value={location}>
+                  {location}
+                </option>
+              ))}
+            </Select>
+          </HStack>
         </Box>
 
         <Grid
