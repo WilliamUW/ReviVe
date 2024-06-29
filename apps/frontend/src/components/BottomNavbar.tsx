@@ -1,8 +1,8 @@
 // src/components/BottomNavbar.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Flex, Box, Icon } from '@chakra-ui/react';
-import { FaHome, FaRecycle, FaTools, FaShoppingCart } from 'react-icons/fa';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Flex, Box, Icon } from "@chakra-ui/react";
+import { FaHome, FaRecycle, FaTools, FaShoppingCart } from "react-icons/fa";
 
 const BottomNavbar = () => (
   <Flex
@@ -23,16 +23,16 @@ const BottomNavbar = () => (
         <Box>Home</Box>
       </Box>
     </Link>
-    <Link to="/unused">
-      <Box textAlign="center">
-        <Icon as={FaRecycle} w={6} h={6} />
-        <Box>Listing</Box>
-      </Box>
-    </Link>
     <Link to="/broken">
       <Box textAlign="center">
         <Icon as={FaTools} w={6} h={6} />
         <Box>Broken</Box>
+      </Box>
+    </Link>
+    <Link to="/unused">
+      <Box textAlign="center">
+        <Icon as={FaRecycle} w={6} h={6} />
+        <Box>Listing</Box>
       </Box>
     </Link>
     <Link to="/buy">
