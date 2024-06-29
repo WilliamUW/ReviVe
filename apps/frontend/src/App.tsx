@@ -1,10 +1,6 @@
 import { DAppKitProvider } from "@vechain/dapp-kit-react";
-import { ChakraProvider, Container, Flex } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import {
-  Dropzone,
-  Footer,
-  InfoCard,
-  Instructions,
   Navbar,
   SubmissionModal,
 } from "./components";

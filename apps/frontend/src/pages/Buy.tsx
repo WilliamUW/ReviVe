@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Box,
   VStack,
@@ -9,7 +9,6 @@ import {
   Grid,
   Card,
   CardBody,
-  CardFooter,
   Image,
   Modal,
   ModalOverlay,
@@ -29,7 +28,7 @@ import { DeviceListing } from "../utils/deviceHelpers";
 
 export default function Buy() {
   const { listings: mockListings } = useUserContext();
-  const [listings, setListings] = useState<DeviceListing[]>(mockListings);
+  const [listings] = useState<DeviceListing[]>(mockListings);
   const [filteredListings, setFilteredListings] =
     useState<DeviceListing[]>(mockListings);
   const [searchTerm, setSearchTerm] = useState("");
