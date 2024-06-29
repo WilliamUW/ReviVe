@@ -31,7 +31,9 @@ export default function BrokenElectronic() {
   const navigate = useNavigate();
   const [image, setImage] = useState<File | null>(null);
   const [deviceInfo, setDeviceInfo] = useState<any>(null);
-  const [conversation, setConversation] = useState<{ user: string; bot: string }[]>([]);
+  const [conversation, setConversation] = useState<
+    { user: string; bot: string }[]
+  >([]);
   const [question, setQuestion] = useState<string>("");
   const [items, setItems] = useState<DeviceInfo[]>([]);
 
@@ -45,12 +47,13 @@ export default function BrokenElectronic() {
   const analyzeImage = async () => {
     if (!image) return;
 
-    console.log(VITE_GEMINI_API_KEY)
+    console.log(VITE_GEMINI_API_KEY);
 
     try {
       const model = genAI.getGenerativeModel({
         model: "gemini-1.5-flash",
-        systemInstruction: "You are ReviVeBot, an AI assistant designed to help users identify and troubleshoot their electronic devices. Using an image of the device, you will accurately determine the make and model, diagnose common issues, and provide step-by-step guidance for fixing the device. Your goal is to offer clear, concise, and actionable instructions to help users repair their electronics efficiently. You should be friendly, engaging and likeable, use lots of emojis. Keep answers less than 200 characters, as concise as possible like an actual conversation.",
+        systemInstruction:
+          "You are ReviVeBot, an AI assistant designed to help users identify and troubleshoot their electronic devices. Using an image of the device, you will accurately determine the make and model, diagnose common issues, and provide step-by-step guidance for fixing the device. Your goal is to offer clear, concise, and actionable instructions to help users repair their electronics efficiently. You should be friendly, engaging and likeable, use lots of emojis. Keep answers less than 200 characters, as concise as possible like an actual conversation.",
       });
       const imagePart = await fileToGenerativePart(image);
 
@@ -85,7 +88,8 @@ export default function BrokenElectronic() {
 
       const model = genAI.getGenerativeModel({
         model: "gemini-1.5-flash",
-        systemInstruction: "You are ReviVeBot, an AI assistant designed to help users identify and troubleshoot their electronic devices. Using an image of the device, you will accurately determine the make and model, diagnose common issues, and provide step-by-step guidance for fixing the device. Your goal is to offer clear, concise, and actionable instructions to help users repair their electronics efficiently. You should be friendly, engaging and likeable, use lots of emojis. Keep answers less than 200 characters, as concise as possible like an actual conversation.",
+        systemInstruction:
+          "You are ReviVeBot, an AI assistant designed to help users identify and troubleshoot their electronic devices. Using an image of the device, you will accurately determine the make and model, diagnose common issues, and provide step-by-step guidance for fixing the device. Your goal is to offer clear, concise, and actionable instructions to help users repair their electronics efficiently. You should be friendly, engaging and likeable, use lots of emojis. Keep answers less than 200 characters, as concise as possible like an actual conversation.",
       });
       const result = await model.generateContent([
         `Given the device: ${deviceInfo.name} ${deviceInfo.model}, answer the following repair question: ${question}`,
@@ -107,11 +111,16 @@ export default function BrokenElectronic() {
       setDeviceInfo(null);
       setImage(null);
       console.log("Listing broken item:", deviceInfo);
-      alert(
-        `You have received ${deviceInfo?.b3tr_reward} B3TR tokens for listing your ${deviceInfo?.name}! \n\n Thank you for preventing more devices from going to landfills. 🌍🔋♻️`
-      );
-      navigate("/sell/unused");
+
+      navigate("/unused");
     }
+  };
+
+  const itemIsFixed = () => {
+    alert(
+      `You have received ${Math.round(Math.random() * 10) + 5} B3TR tokens for fixing your ${deviceInfo?.name}! \n\n Thank you for preventing more devices from going to landfills. 🌍🔋♻️ \n\nYour data also helps me assist other users better! 😄🛠️`
+    );
+    navigate("/buy");
   };
 
   const startSpeechRecognition = () => {
@@ -160,23 +169,23 @@ export default function BrokenElectronic() {
             marginBottom={4}
           />
         )}
-        <Button
-          onClick={analyzeImage}
-          colorScheme="blue"
-          marginBottom={4}
-        >
+        <Button onClick={analyzeImage} colorScheme="blue" marginBottom={4}>
           Analyze Image
         </Button>
         {deviceInfo && (
           <Box marginBottom={4}>
-            <Heading as="h2" size="lg">Device Information:</Heading>
+            <Heading as="h2" size="lg">
+              Device Information:
+            </Heading>
             <Text>Name: {deviceInfo.name}</Text>
             <Text>Model: {deviceInfo.model}</Text>
           </Box>
         )}
         {conversation.length > 0 && (
           <Box marginBottom={4} maxWidth="md">
-            <Heading as="h2" size="lg">Conversation:</Heading>
+            <Heading as="h2" size="lg">
+              Conversation:
+            </Heading>
             {conversation.map((entry, index) => (
               <Box key={index} marginBottom={2}>
                 {entry.user && (
@@ -219,16 +228,32 @@ export default function BrokenElectronic() {
             List as Broken
           </Button>
         )}
+        {deviceInfo && (
+          <Button onClick={itemIsFixed} colorScheme="green">
+            Device is Fixed!
+          </Button>
+        )}
         <Box marginTop={8} width="100%" maxWidth="md">
           <Heading as="h2" size="lg" marginBottom={4}>
             List Items:
           </Heading>
           <List spacing={4}>
             {items.map((item, index) => (
-              <ListItem key={index} borderWidth={1} borderRadius="lg" padding={4}>
-                <Heading as="h3" size="md">{item.name}</Heading>
-                <Text><strong>Model:</strong> {item.model}</Text>
-                <Text><strong>Repair Instructions:</strong></Text>
+              <ListItem
+                key={index}
+                borderWidth={1}
+                borderRadius="lg"
+                padding={4}
+              >
+                <Heading as="h3" size="md">
+                  {item.name}
+                </Heading>
+                <Text>
+                  <strong>Model:</strong> {item.model}
+                </Text>
+                <Text>
+                  <strong>Repair Instructions:</strong>
+                </Text>
                 <ReactMarkdown>{item.repair_instructions}</ReactMarkdown>
               </ListItem>
             ))}
