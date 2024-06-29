@@ -13,6 +13,28 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import AppRouter from "./Router";
 import BottomNavbar from "./components/BottomNavbar";
 
+const old = () => (
+  <>
+    <Flex flex={1}>
+      <Container
+        mt={{ base: 4, md: 10 }}
+        maxW={"container.xl"}
+        mb={{ base: 4, md: 10 }}
+        display={"flex"}
+        flex={1}
+        alignItems={"center"}
+        justifyContent={"flex-start"}
+        flexDirection={"column"}
+      >
+        <InfoCard />
+        <Instructions />
+        <Dropzone />
+      </Container>
+    </Flex>
+    <Footer />
+  </>
+);
+
 // RECaptcha V3 site key (https://developers.google.com/recaptcha/docs/v3)
 const VITE_RECAPTCHA_V3_SITE_KEY = import.meta.env
   .VITE_RECAPTCHA_V3_SITE_KEY as string;
@@ -28,26 +50,10 @@ function App() {
           nodeUrl="https://testnet.vechain.org/"
           logLevel={"DEBUG"}
         >
-          <AppRouter />
           {/* <BottomNavbar /> */}
           <Navbar />
-          <Flex flex={1}>
-            <Container
-              mt={{ base: 4, md: 10 }}
-              maxW={"container.xl"}
-              mb={{ base: 4, md: 10 }}
-              display={"flex"}
-              flex={1}
-              alignItems={"center"}
-              justifyContent={"flex-start"}
-              flexDirection={"column"}
-            >
-              <InfoCard />
-              <Instructions />
-              <Dropzone />
-            </Container>
-          </Flex>
-          <Footer />
+
+          <AppRouter />
 
           {/* MODALS  */}
           <SubmissionModal />
