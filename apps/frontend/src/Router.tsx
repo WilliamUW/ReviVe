@@ -7,11 +7,13 @@ import Broken from "./pages/Broken";
 import Buy from "./pages/Buy";
 import App from "./App"; // Your main app component
 import BottomNavbar from "./components/BottomNavbar";
+import SellPage from "./pages/Sell";
 
 const AppRouter = () => (
   <>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/sell" element={<SellPage />} />
       <Route path="/unused" element={<Unused />} />
       <Route path="/broken" element={<Broken />} />
       <Route path="/buy" element={<Buy />} />
