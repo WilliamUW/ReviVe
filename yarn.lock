@@ -4382,6 +4382,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@remix-run/router@npm:1.17.0":
+  version: 1.17.0
+  resolution: "@remix-run/router@npm:1.17.0"
+  checksum: a801f605d6ff9fdc53676403cd9441f713251fbc23dcaf65c9337b3846e86db9c1b1fc9eee3c0f7142e3e1f7ed44efd427278138c3be9eeb7dd7e693347c35ab
+  languageName: node
+  linkType: hard
+
 "@repo/config-contract@*, @repo/config-contract@workspace:packages/config-contract":
   version: 0.0.0-use.local
   resolution: "@repo/config-contract@workspace:packages/config-contract"
@@ -18825,6 +18832,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-router-dom@npm:^6.24.0":
+  version: 6.24.0
+  resolution: "react-router-dom@npm:6.24.0"
+  dependencies:
+    "@remix-run/router": 1.17.0
+    react-router: 6.24.0
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 6b40474070661d60b7a237756db7d27e7925546981a2325673519dab7cb15184ad490f092f1f9e947aa414b54be8c1f50f2ecb175e2b57e4c0d7d012a170d48d
+  languageName: node
+  linkType: hard
+
+"react-router@npm:6.24.0":
+  version: 6.24.0
+  resolution: "react-router@npm:6.24.0"
+  dependencies:
+    "@remix-run/router": 1.17.0
+  peerDependencies:
+    react: ">=16.8"
+  checksum: c58073711357500f7b2adb8968f6d160e3f2fbe2f9d9482648e70ea96910438886d4e713d420c548c4a7d1ad30db15bc9a4b952bb1cbc14dd75a209cf286f49b
+  languageName: node
+  linkType: hard
+
 "react-slot-counter@npm:^2.2.5":
   version: 2.3.2
   resolution: "react-slot-counter@npm:2.3.2"
@@ -19424,6 +19455,7 @@ __metadata:
   dependencies:
     eslint: ^8.57.0
     prettier: ^3.2.5
+    react-router-dom: ^6.24.0
     turbo: latest
   languageName: unknown
   linkType: soft
@@ -23452,6 +23484,7 @@ turbo@latest:
     react-google-recaptcha-v3: ^1.10.1
     react-icons: ^5.2.1
     react-lottie: ^1.2.4
+    react-router-dom: ^6.24.0
     typescript: ^5.2.2
     vite: ^5.2.0
     vite-plugin-node-polyfills: ^0.22.0
