@@ -12,6 +12,7 @@ import { lightTheme } from "./theme";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import AppRouter from "./Router";
 import BottomNavbar from "./components/BottomNavbar";
+import { UserProvider } from "./components/UserContext";
 
 const old = () => (
   <>
@@ -43,21 +44,23 @@ function App() {
   return (
     <GoogleReCaptchaProvider reCaptchaKey={VITE_RECAPTCHA_V3_SITE_KEY}>
       <ChakraProvider theme={lightTheme}>
-        <DAppKitProvider
-          usePersistence
-          requireCertificate={false}
-          genesis="test"
-          nodeUrl="https://testnet.vechain.org/"
-          logLevel={"DEBUG"}
-        >
-          {/* <BottomNavbar /> */}
-          <Navbar />
+        <UserProvider>
+          <DAppKitProvider
+            usePersistence
+            requireCertificate={false}
+            genesis="test"
+            nodeUrl="https://testnet.vechain.org/"
+            logLevel={"DEBUG"}
+          >
+            {/* <BottomNavbar /> */}
+            <Navbar />
 
-          <AppRouter />
+            <AppRouter />
 
-          {/* MODALS  */}
-          <SubmissionModal />
-        </DAppKitProvider>
+            {/* MODALS  */}
+            <SubmissionModal />
+          </DAppKitProvider>
+        </UserProvider>
       </ChakraProvider>
     </GoogleReCaptchaProvider>
   );
