@@ -87,7 +87,7 @@ export default function UnusedElectronic() {
   return (
     <Box minHeight="100vh" padding={4}>
       <VStack spacing={4} align="center">
-        <Heading as="h1" size="xl">Sell Electronic</Heading>
+        <Heading as="h1" size="xl">List Electronic</Heading>
         <Input type="file" accept="image/*" onChange={handleImageUpload} />
         {image && (
           <Image

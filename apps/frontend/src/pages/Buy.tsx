@@ -87,7 +87,7 @@ export default function Buy() {
     <Box minHeight="100vh" padding={4} paddingBottom={20}>
       <VStack spacing={4} align="center">
         <Heading as="h1" size="xl" marginBottom={4}>
-          ReviVe BuyPage
+          ReviVe Marketplace
         </Heading>
 
         <Box width="full" maxWidth="4xl" marginBottom={4}>
