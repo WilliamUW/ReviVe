@@ -26,7 +26,7 @@ const BottomNavbar = () => (
     <Link to="/unused">
       <Box textAlign="center">
         <Icon as={FaRecycle} w={6} h={6} />
-        <Box>Unused</Box>
+        <Box>Listing</Box>
       </Box>
     </Link>
     <Link to="/broken">
