@@ -1,4 +1,7 @@
 {
+  "compilerOptions": {
+    "sourceMap": true
+  },
   "extends": "@repo/typescript-config/vite.json",
   "include": ["src"]
 }
