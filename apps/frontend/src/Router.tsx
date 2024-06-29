@@ -6,6 +6,7 @@ import Unused from './pages/Unused';
 import Broken from './pages/Broken';
 import Buy from './pages/Buy';
 import App from './App'; // Your main app component
+import BottomNavbar from './components/BottomNavbar';
 
 const AppRouter = () => (
   <Router>
@@ -15,6 +16,7 @@ const AppRouter = () => (
       <Route path="/broken" element={<Broken />} />
       <Route path="/buy" element={<Buy />} />
     </Routes>
+    <BottomNavbar />
   </Router>
 );
 
