@@ -3,11 +3,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Unused from "./pages/Unused";
-import Broken from "./pages/Broken";
-import App from "./App"; // Your main app component
 import BottomNavbar from "./components/BottomNavbar";
 import SellPage from "./pages/Sell";
 import BuyPage from "./pages/Buy";
+import BrokenElectronic from "./pages/Broken";
 
 const AppRouter = () => (
   <>
@@ -15,7 +14,7 @@ const AppRouter = () => (
       <Route path="/" element={<Home />} />
       <Route path="/sell" element={<SellPage />} />
       <Route path="/unused" element={<Unused />} />
-      <Route path="/broken" element={<Broken />} />
+      <Route path="/broken" element={<BrokenElectronic />} />
       <Route path="/buy" element={<BuyPage />} />
     </Routes>
     <BottomNavbar />
