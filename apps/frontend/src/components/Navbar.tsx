@@ -21,7 +21,8 @@ export const Navbar = () => {
         maxW={"container.xl"}
       >
         <HStack flex={1} justifyContent={"start"}>
-          <Image src="/vebetterdao-logo.svg" />
+          {/* <Image src="/vebetterdao-logo.svg" /> */}
+          <strong>ReviVe</strong>
         </HStack>
 
         <HStack flex={1} spacing={4} justifyContent={"end"}>
