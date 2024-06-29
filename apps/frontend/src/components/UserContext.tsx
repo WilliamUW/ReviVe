@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, ReactNode } from "react";
-import {DeviceListing, mockListings} from "../utils/deviceHelpers";
+import { DeviceListing, mockListings } from "../utils/deviceHelpers";
 
 // Define the context type
 type UserContextType = {

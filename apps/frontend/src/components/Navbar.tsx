@@ -1,4 +1,4 @@
-import { Box, Container, HStack, Image } from "@chakra-ui/react";
+import { Box, Container, HStack } from "@chakra-ui/react";
 import { ConnectWalletButton } from "./ConnectWalletButton";
 export const Navbar = () => {
   return (
