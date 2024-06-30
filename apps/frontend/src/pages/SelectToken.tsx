@@ -7,6 +7,7 @@ export const tokens = [
   {
     name: "VeThor",
     symbol: "VTHO",
+    price: 0.002338,
     decimals: 18,
     address: "0x0000000000000000000000000000456e65726779",
     desc: "Represents the underlying cost of using VeChainThor",
@@ -29,6 +30,7 @@ export const tokens = [
   {
     name: "Plair",
     symbol: "PLA",
+    price: 0.00000565,
     decimals: 18,
     address: "0x645d2019ed39e58db76af602317d177b53ba8b9d",
     desc: "Plair is a decentralized gaming ecosystem disrupting the amateur gaming market",
@@ -38,6 +40,7 @@ export const tokens = [
   {
     name: "Eight Hours Token",
     symbol: "EHrT",
+    price: 0.0000027265,
     decimals: 18,
     address: "0xdeff1d52f3fbf551b3337b9a02f719cd21da956b",
     desc: "Utility token for the 8Hours Platform",
@@ -47,6 +50,7 @@ export const tokens = [
   {
     name: "Decent.bet Token",
     symbol: "DBET",
+    price: 0.000336,
     decimals: 18,
     address: "0x510fcddc9424b1bbb328a574f45bfddb130e1f03",
     desc: "DECENT.bet is an open-source p2p gaming platform built on the VeChain blockchain",
@@ -56,6 +60,7 @@ export const tokens = [
   {
     name: "OceanEx Token",
     symbol: "OCE",
+    price: 0.000199,
     decimals: 18,
     address: "0x9652aead889e8df7b5717ed984f147c132f85a69",
     desc: "OceanEx Token (OCE) is OceanEx's platform token",
@@ -65,6 +70,7 @@ export const tokens = [
   {
     name: "Jur",
     symbol: "JUR",
+    price: 0.006347,
     decimals: 18,
     address: "0x602b7a4309b3412d269c6cdddad962c0b94494d8",
     desc: "JUR Token is the token of justice. Access a decentralized legal ecosystem for professionals and enterprises.",
@@ -74,6 +80,7 @@ export const tokens = [
   {
     name: "Yeet Coin",
     symbol: "YEET",
+    price: 0.00047,
     decimals: 18,
     address: "0x32456c328f647f5b35757d38fe634868d9fe3808",
     desc: "Alpaca memes",
@@ -83,6 +90,7 @@ export const tokens = [
   {
     name: "SneakerCoin",
     symbol: "SNK",
+    price: 0.01,
     decimals: 18,
     address: "0xe0d0402a948ab02af08938dad2a79669bdbe1c31",
     desc: "A crypto asset that belongs to all young people around the world.",
@@ -92,6 +100,7 @@ export const tokens = [
   {
     name: "SHAToken",
     symbol: "SHA",
+    price: 0.00023543,
     decimals: 18,
     address: "0xa1bcfa20a82eca70a5af5420b11bc53a279024ec",
     desc: "Asset Management & Inheritance Solutions",
@@ -101,6 +110,7 @@ export const tokens = [
   {
     name: "Madini",
     symbol: "MDN",
+    price: 0.01,
     decimals: 18,
     address: "0x4c76f2c483e0ec292c06d0a0d1440717ed0787c0",
     desc: "MDN is the Madini VeChain Vip180 token that is used to carry value or 'smart money' from Madini smart contracts. In other words, transactions on decentralized applications occurring on Madini VeChain's blockchain will use MDN. It is available for investing by the general public. MDN token is the Madini utility token in our Ecosystem since it is linked to the Madini Minerals Marketplace, to the Madini VeChain Wallet - Android APP - and other Madini VeChain dApps.",
@@ -118,6 +128,7 @@ export const tokens = [
   {
     name: "VEED",
     symbol: "VEED",
+    price: 0.0001227,
     decimals: 18,
     address: "0xa39a4b2e23220305083e2e7c94c8950ef1e641c6",
     desc: "VEED is the ecosystem utility and governance token of VIMworld, a Smart NFT project built on VeChainThor focused on VIM collectibles. The VEED token is used for a variety of utilities within the VIMworld Ecosystem, including VIM feeding, trading, adoption, farming, rewards, governance, and more.",
@@ -143,6 +154,7 @@ export const tokens = [
   {
     name: "Mad Viking Games",
     symbol: "MVG",
+    price: 0.0005639,
     decimals: 18,
     address: "0x6e32a40481dc95c7495b48ee81e3d388a0f0eb77",
     desc: "MVG is the ecosystem utility token of the MVG platform, games and marketplace",
@@ -165,6 +177,7 @@ export const tokens = [
   {
     name: "GEMS",
     symbol: "GEMS",
+    price: 0.04954,
     decimals: 18,
     address: "0x7b12cdd6dc20bac5a7c85924e4d29f84a3bc376f",
     desc: "The governance token of the Mad Viking Games platform and marketplace",
@@ -187,6 +200,7 @@ export const tokens = [
   {
     name: "VeUSD",
     symbol: "VEUSD",
+    price: 1.01,
     decimals: 6,
     address: "0x033bbc923a9378600c6b52fa9aada608c4cc7ece",
     desc: "US Dollar-pegged stablecoin fully backed 1-to-1 and redeemable for USD held in a trust account managed by Prime Trust and powered by Stably",
@@ -196,6 +210,7 @@ export const tokens = [
   {
     name: "TestViracoins",
     symbol: "TVIRC",
+    price: 0.000003,
     decimals: 18,
     address: "0xf276fbde42c9eb4f9c4e1828cb7cd2383fd7ba27",
     desc: "TestViracoins will be the test currency in Viracles city.",
@@ -211,6 +226,7 @@ export const tokens = [
   {
     name: "Veiled VET",
     symbol: "VVET",
+    price: 0.02611,
     decimals: 18,
     address: "0x86fb5343bbecffc86185c023a2a6ccc76fc0afd8",
     desc: "Wrapper VET VIP-180 token (VIP-180) that 1:1 pegs VET. Audit report provided by PeckShield.",
@@ -225,6 +241,7 @@ export const tokens = [
   {
     name: "UNION",
     symbol: "UNION",
+    price: 0.01,
     decimals: 18,
     address: "0xea283edcfdb17a8a7537f8a6a84c4bd1c21d608d",
     desc: "Utility token for NoNerdsInc",
@@ -241,6 +258,7 @@ export const tokens = [
   {
     name: "VeStacks",
     symbol: "VST",
+    price: 0.01,
     decimals: 18,
     address: "0x737a9a0022f515983b0a6415b9525c3e5a443e2f",
     desc: "The main currency used in Thugs Paradise. VeThugs P2E Game. Will later be integrated in BlackVMarket & Used for Future related BlackVeMarket Mints",
@@ -259,6 +277,7 @@ export const tokens = [
   {
     name: "Paper Token",
     symbol: "PPR",
+    price: 0.01,
     decimals: 18,
     address: "0x947112fe4e2a71a3e37cdf41733d5a570df3ddaa",
     desc: "Utility token for the NFT Paper Project to interact with burning smart contracts",
@@ -268,6 +287,7 @@ export const tokens = [
   {
     name: "Dragon Coin",
     symbol: "DRAGON",
+    price: 0.000000000001583,
     decimals: 18,
     address: "0x98ceed8ee645c2d964cc0dd4342c832d52aeeb13",
     desc: "The main currency used For Staking and evolving your Dragon egg. Dragons of Singapura. Will also be used for future nft drops within Singapura",
@@ -286,6 +306,7 @@ export const tokens = [
   {
     name: "VPunks Token",
     symbol: "VPU",
+    price: 0.00773,
     decimals: 18,
     address: "0x8c1d95e96b69941b1b81145d2f2a100e7d259880",
     desc: "VPU is the ecosystem utility and governance token of VPunks NFT & VPunks marketplace",
@@ -307,6 +328,7 @@ export const tokens = [
   {
     name: "VeSea",
     symbol: "VSEA",
+    price: 0.00655,
     decimals: 18,
     address: "0x776b68c9f217385b0a4657296f6bf6c4b2600557",
     desc: "The fuel powering VeSea's NFT Utility Ecosystem, designed to be destroyed by VeSea-deployed smartcontracts providing usage to various VIP-181 tokens",
@@ -316,6 +338,7 @@ export const tokens = [
   {
     name: "BananaCoin",
     symbol: "BANANA",
+    price: 0.00000000000009112,
     decimals: 18,
     address: "0xca92f3d24c3f04c3ab7711f5a8981b48900d1baf",
     desc: "MemeCoin, GG Gangster Gorillas no roadmap, no utility Lots of potential.",
@@ -330,6 +353,7 @@ export const tokens = [
   {
     name: "LEGACY TOKEN",
     symbol: "LGCT",
+    price: 0.01,
     decimals: 18,
     address: "0xcd06d669e2ee5d2da9906f121818a7331e23fba2",
     desc: "The Legacy Network token (LGCT) is a multichain utility and payment token which allows its holders to get the best out of the Legacy Network ecosystem. LGCT is available on VeChain, Ethereum, Binance smart chain and Polygon.",
@@ -352,6 +376,7 @@ export const tokens = [
   {
     name: "VFoxToken",
     symbol: "VFA",
+    price: 0.01,
     decimals: 18,
     address: "0xd625f35dfcb0ecdb83dc6d71e33c8d53b825fc48",
     desc: "Utility token of the VFox Alliance ecosystem",
@@ -368,6 +393,7 @@ export const tokens = [
   {
     name: "MVA Token",
     symbol: "MVA",
+    price: 0.00699,
     decimals: 18,
     address: "0x307bd9ebe9b8f1baa59731f18aecc999e8b33dea",
     desc: "MVA is a utility and governance token for the MadⓥApes Ecosystem",
@@ -383,6 +409,7 @@ export const tokens = [
   {
     name: "Squirtle Squad",
     symbol: "SQUAD",
+    price: 0.002850,
     decimals: 18,
     address: "0xcb384a3a82bfe0619963d65a05f3801ddc23f3cc",
     desc: "VeChains finest Meme Coin, Powering Turtle Labs a DeFi Platform.",
@@ -397,6 +424,7 @@ export const tokens = [
   {
     name: "ThreeDAbleToken",
     symbol: "3DT",
+    price: 0.000000000777,
     decimals: 18,
     address: "0xa258e1a871f10cccf6330bfa06366d929ea26b46",
     desc: "Utility token for 3DAbles platform",
@@ -412,6 +440,7 @@ export const tokens = [
   {
     name: "Black Ve Coin",
     symbol: "BVC",
+    price: 0.00000311,
     decimals: 18,
     address: "0x441ce74a5d456e3b262fc3d9f3b2c359f7d77016",
     desc: "The fuel powering BlackVeMarket NFT Utility Ecosystem",
@@ -430,6 +459,7 @@ export const tokens = [
   {
     name: "MILK",
     symbol: "MILK",
+    price: 0.0000158,
     decimals: 18,
     address: "0xbfbb567e5d734cffe510ab23d08f6c46f990c909",
     desc: "Utility token of the GOATZ NFT project",
@@ -439,6 +469,7 @@ export const tokens = [
   {
     name: "GCRED Token",
     symbol: "GCRED",
+    price: 0.01,
     decimals: 18,
     address: "0x810def6605aef9436059a60eda1382367966e9de",
     desc: "The Galactic Credit is the main currency of the ExoWorlds metaverse. Whether buying, upgrading, forging or enchanting, users will need GCRED if they want to unlock the full potential of ExoWorlds.",
@@ -458,6 +489,7 @@ export const tokens = [
   {
     name: "BANGZ",
     symbol: "BANGZ",
+    price: 0.01,
     decimals: 18,
     address: "0xd105d3d218d36490590b474689b95dbe3bded6b7",
     desc: "Bangz token for Bangzboard stacking, rewards and BangzMarket",
@@ -475,6 +507,7 @@ export const tokens = [
   {
     name: "VOT3",
     symbol: "VOT3",
+    price: 0.01,
     decimals: 18,
     address: "0x9df69ad8ff89063869e04164a11579c0a8532e84",
     desc: "Tokens representing voting power in the VeBetterDAO",
@@ -484,6 +517,7 @@ export const tokens = [
   {
     name: "B3TR",
     symbol: "B3TR",
+    price: 0.16630,
     decimals: 18,
     address: "0xac0ca2a5148e15ef913f9f5cf8eb3cf763f5a43f",
     desc: "The official utility token in the VeBetterDAO",
@@ -493,6 +527,7 @@ export const tokens = [
   {
     name: "Cup of Joe",
     symbol: "COJ",
+    price: 0.000007804,
     decimals: 18,
     address: "0x922a46bb49fe98ff73482a3ea8a6dd0a2c7c443a",
     desc: "AI Generated Memecoin | Coffee Connoisseur Contributing to an Eco-Friendly Coffee ☕️Environment Worldwide 🌎 +Send / Receive a Cup of Joe ☕️ Worldwide 🌎",
