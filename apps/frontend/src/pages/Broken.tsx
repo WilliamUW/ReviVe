@@ -69,7 +69,7 @@ export default function BrokenElectronic() {
         const jsonString = jsonMatch[1];
         const info = JSON.parse(jsonString);
         setDeviceInfo(info);
-        const botResponse = `Hello! I see you have a ${info.name} (${info.model}). ${deviceInfo.repair_instructions} How can I help you fix it today? 🛠️`;
+        const botResponse = `Hello! I see you have a ${info.name} (${info.model}). ${info.repair_instructions} How can I help you fix it today? 🛠️`;
         speak(botResponse);
         setConversation((prev) => [...prev, { user: "", bot: botResponse }]);
       } else {
