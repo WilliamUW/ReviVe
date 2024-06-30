@@ -54,7 +54,7 @@ export default function UnusedElectronic() {
       if (jsonMatch && jsonMatch[1]) {
         const jsonString = jsonMatch[1];
         const info = JSON.parse(jsonString);
-        info.b3tr_reward = Math.round(info.suggested_price / 7);
+        info.b3tr_reward = Math.max(5, Math.round(info.suggested_price / 7));
         setDeviceInfo(info);
       } else {
         console.error("Failed to extract JSON from response");
