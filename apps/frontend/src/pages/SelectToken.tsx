@@ -3,7 +3,7 @@ import type { Token } from "./types";
 type Props = {
   onChange: (token: Token | undefined) => void;
 };
-const tokens = [
+export const tokens = [
   {
     name: "VeThor",
     symbol: "VTHO",
@@ -523,9 +523,6 @@ export default function SelectToken({ onChange }: Props) {
 
   return (
     <>
-      <label htmlFor="token" className="sr-only">
-        Token
-      </label>
       <select
         name="token"
         id="token"

@@ -26,6 +26,8 @@ import {
 } from "@chakra-ui/react";
 import { useUserContext } from "../components/UserContext";
 import { DeviceListing } from "../utils/deviceHelpers";
+import SendTransaction from "./SendTransaction";
+import BuyCoffee from "./BuyCoffee";
 
 export default function Buy() {
   const { listings: mockListings } = useUserContext();
@@ -204,8 +206,13 @@ export default function Buy() {
             <ModalCloseButton />
             <ModalBody>
               {selectedListing && (
-                <VStack align="start" spacing={1} >
-                  <Box display="flex" overflowX="auto" width="100%" style={{marginBottom: 10}}>
+                <VStack align="start" spacing={1}>
+                  <Box
+                    display="flex"
+                    overflowX="auto"
+                    width="100%"
+                    style={{ marginBottom: 10 }}
+                  >
                     {selectedListing.imageLinks.map((link, index) => (
                       <Image
                         key={index}
@@ -226,8 +233,15 @@ export default function Buy() {
                   <Text fontWeight="bold" color="green.600">
                     B3TR Reward: {selectedListing.b3tr_reward}
                   </Text>
-                  <HStack style={{marginBottom: 10}}>
-                    <Button onClick={() => buyItem()}>Buy</Button>
+                  <HStack style={{ marginBottom: 10 }}>
+                    {/* <Button onClick={() => buyItem()}>Buy</Button> */}
+                    {/* <SendTransaction
+                      recipientAddress="0x0B986D07894018797493659140ddF47C3F762A9B"
+                      amount={selectedListing.price}
+                      buttonText="Buy with VET"
+                      decimals={18} // Optional: defaults to 18 if not provided
+                    /> */}
+                    <BuyCoffee inputAmount={selectedListing.price} />
                   </HStack>
                 </VStack>
               )}
