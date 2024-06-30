@@ -36,7 +36,7 @@ export const mockListings: DeviceListing[] = [
     id: 2,
     name: "Samsung TV",
     description: "Large Samsung Smart TV",
-    price: 300,
+    price: 50,
     condition: "Broken",
     location: "Los Angeles",
     model: "QN55Q60A",

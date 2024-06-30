@@ -31,6 +31,9 @@ export default function BuyCoffee({
   const [amount, setAmount] = React.useState<string>(
     inputAmount ? inputAmount.toString() : "1"
   );
+  const convertedAmount: number =
+    Math.round(parseFloat(amount) / (selectedToken?.price ?? 0.026));
+
   const handleChangeAmount = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => setAmount(event.target.value);
@@ -57,12 +60,15 @@ export default function BuyCoffee({
               clauseBuilder.transferToken(
                 selectedToken.address,
                 recipientAddress,
-                unitsUtils.parseUnits(amount, selectedToken.decimals)
+                unitsUtils.parseUnits(
+                  convertedAmount.toString(),
+                  selectedToken.decimals
+                )
               )
             : // or use the clauseBuilder to transfer VET by default
               clauseBuilder.transferVET(
                 recipientAddress,
-                unitsUtils.parseVET(amount)
+                unitsUtils.parseVET(convertedAmount.toString())
               )),
 
           // an optional comment is shown to the user in the wallet
@@ -111,7 +117,7 @@ export default function BuyCoffee({
               placeholder="0"
               autoComplete="off"
               disabled={true}
-              value={amount}
+              value={convertedAmount.toString()}
               onChange={handleChangeAmount}
               style={{ maxWidth: 100 }}
             />
@@ -123,7 +129,7 @@ export default function BuyCoffee({
               disabled={!canSend}
               onClick={handleSend}
             >
-              Buy with {amount} {selectedToken?.symbol ?? "VET"}
+              Buy with {convertedAmount} {selectedToken?.symbol ?? "VET"}
             </Button>
           </HStack>
         </div>
