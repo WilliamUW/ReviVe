@@ -72,7 +72,7 @@ export default function BuyCoffee({
               )),
 
           // an optional comment is shown to the user in the wallet
-          comment: "Send " + amount + " " + (selectedToken?.symbol ?? "VET"),
+          comment: "Send " + convertedAmount.toString() + " " + (selectedToken?.symbol ?? "VET"),
         },
       ];
 
