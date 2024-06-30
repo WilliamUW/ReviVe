@@ -24,6 +24,8 @@ export default function BuyCoffee() {
   // state for sending status
   const [txId, setTxId] = React.useState<string>("");
   const [error, setError] = React.useState<string>("");
+  const [recipientAddress, setRecipientAddress] =
+    React.useState<string>(RECIPIENT_ADDRESS);
   const handleSend = async () => {
     if (!account || !RECIPIENT_ADDRESS) {
       return;
@@ -39,12 +41,12 @@ export default function BuyCoffee() {
             ? // the clauseBuilder helps build the data for the transaction
               clauseBuilder.transferToken(
                 selectedToken.address,
-                RECIPIENT_ADDRESS,
+                recipientAddress,
                 unitsUtils.parseUnits(amount, selectedToken.decimals)
               )
             : // or use the clauseBuilder to transfer VET by default
               clauseBuilder.transferVET(
-                RECIPIENT_ADDRESS,
+                recipientAddress,
                 unitsUtils.parseVET(amount)
               )),
 
@@ -83,6 +85,11 @@ export default function BuyCoffee() {
 
       <div>
         <div className="relative mt-2 rounded-md shadow-sm">
+          <input
+            type="text"
+            value={recipientAddress}
+            onChange={(e) => setRecipientAddress(e.target.value)}
+          ></input>
           <input
             type="text"
             name="amount"
