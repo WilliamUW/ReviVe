@@ -554,7 +554,6 @@ export default function SelectToken({ onChange }: Props) {
     );
   };
 
-  console.log("tokenRegistry", tokenRegistry.data);
 
   return (
     <>
