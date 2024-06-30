@@ -13,12 +13,7 @@ export default function BuyCoffee() {
   const connex = useConnex();
 
   // state for the currently selected token
-  const [selectedToken, setSelectedToken] = React.useState<Token | undefined>({
-    address: "0x0000000000000000000000000000456E65726779",
-    name: "VTHO",
-    symbol: "VTHO",
-    decimals: 18,
-  });
+  const [selectedToken, setSelectedToken] = React.useState<Token | undefined>();
 
   // state for the amount to send
   const [amount, setAmount] = React.useState<string>("1");
@@ -119,6 +114,12 @@ export default function BuyCoffee() {
 
       {/* {Boolean(error) && <Error>{error}</Error>}
             <Transaction txId={txId} /> */}
+      {Boolean(error) && (
+        <div className="text-red-500">
+          <p>{txId}</p>
+          <p>{error}</p>
+        </div>
+      )}
     </div>
   );
 }
