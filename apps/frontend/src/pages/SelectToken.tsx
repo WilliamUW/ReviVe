@@ -28,6 +28,16 @@ export const tokens = [
     ],
   },
   {
+    name: "B3TR",
+    symbol: "B3TR",
+    price: 0.16630,
+    decimals: 18,
+    address: "0xac0ca2a5148e15ef913f9f5cf8eb3cf763f5a43f",
+    desc: "The official utility token in the VeBetterDAO",
+    icon: "3d55edb42b09a634f7f2f26756a02571de901a5b.png",
+    totalSupply: "3749999999999999999999955",
+  },
+  {
     name: "Plair",
     symbol: "PLA",
     price: 0.00000565,
@@ -513,16 +523,6 @@ export const tokens = [
     desc: "Tokens representing voting power in the VeBetterDAO",
     icon: "17ff70aa1d898bc97ad690dbfad1a3b5643f7e0b.png",
     totalSupply: "1263427679490943321921573",
-  },
-  {
-    name: "B3TR",
-    symbol: "B3TR",
-    price: 0.16630,
-    decimals: 18,
-    address: "0xac0ca2a5148e15ef913f9f5cf8eb3cf763f5a43f",
-    desc: "The official utility token in the VeBetterDAO",
-    icon: "3d55edb42b09a634f7f2f26756a02571de901a5b.png",
-    totalSupply: "3749999999999999999999955",
   },
   {
     name: "Cup of Joe",
