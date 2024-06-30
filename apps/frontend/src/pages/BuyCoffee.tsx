@@ -152,7 +152,19 @@ export default function BuyCoffee({
 
       {/* {Boolean(error) && <Error>{error}</Error>}
             <Transaction txId={txId} /> */}
-      {txId && <p>Transaction ID: {txId}</p>}
+      {txId && (
+        <p>
+          <br />
+          <strong>
+            You have received B3TR tokens for buying on ReviVe! Thank you
+            for preventing more devices from going to landfills. 🌍🔋♻️
+          </strong>
+          <br />
+          <img src="https://i.giphy.com/otnqsqqzmsw7K.webp"></img>
+          Transaction
+          ID: {txId}
+        </p>
+      )}
       {Boolean(error) && (
         <div className="text-red-500">
           <p>{error}</p>
