@@ -8,7 +8,6 @@ import { lightTheme } from "./theme";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import AppRouter from "./Router";
 import { UserProvider } from "./components/UserContext";
-import About from "./pages/About";
 
 // RECaptcha V3 site key (https://developers.google.com/recaptcha/docs/v3)
 const VITE_RECAPTCHA_V3_SITE_KEY = import.meta.env
