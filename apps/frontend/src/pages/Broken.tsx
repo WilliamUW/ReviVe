@@ -69,7 +69,7 @@ export default function BrokenElectronic() {
         const jsonString = jsonMatch[1];
         const info = JSON.parse(jsonString);
         setDeviceInfo(info);
-        const botResponse = `Hello! I see you have a ${info.name} (${info.model}). How can I help you fix it today? 🛠️`;
+        const botResponse = `Hello! I see you have a ${info.name} (${info.model}). ${deviceInfo.repair_instructions} How can I help you fix it today? 🛠️`;
         speak(botResponse);
         setConversation((prev) => [...prev, { user: "", bot: botResponse }]);
       } else {
@@ -92,7 +92,7 @@ export default function BrokenElectronic() {
           "You are ReviVeBot, an AI assistant designed to help users identify and troubleshoot their electronic devices. Using an image of the device, you will accurately determine the make and model, diagnose common issues, and provide step-by-step guidance for fixing the device. Your goal is to offer clear, concise, and actionable instructions to help users repair their electronics efficiently. You should be friendly, engaging and likeable, use lots of emojis. Keep answers less than 200 characters, as concise as possible like an actual conversation.",
       });
       const result = await model.generateContent([
-        `Given the device: ${deviceInfo.name} ${deviceInfo.model}, answer the following repair question: ${question}`,
+        `Given the device: ${deviceInfo.name} ${deviceInfo.model} ${deviceInfo.repair_instructions}, answer the following repair question: ${question}`,
       ]);
 
       const response = result.response;
@@ -111,7 +111,6 @@ export default function BrokenElectronic() {
       setDeviceInfo(null);
       setImage(null);
       console.log("Listing broken item:", deviceInfo);
-
     }
     navigate("/unused");
   };
@@ -179,6 +178,7 @@ export default function BrokenElectronic() {
             </Heading>
             <Text>Name: {deviceInfo.name}</Text>
             <Text>Model: {deviceInfo.model}</Text>
+            <Text>Repair Instructions: {deviceInfo.repair_instructions}</Text>
           </Box>
         )}
         {conversation.length > 0 && (
