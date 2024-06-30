@@ -3,6 +3,7 @@ import { APP_DESCRIPTION, APP_TITLE, RECIPIENT_ADDRESS } from "./config";
 import { useWallet, useConnex } from "@vechain/dapp-kit-react";
 import { clauseBuilder, unitsUtils } from "@vechain/sdk-core";
 import { Token } from "./types";
+import SelectToken from "./SelectToken";
 
 export default function BuyCoffee() {
   // get the connected wallet
@@ -97,9 +98,9 @@ export default function BuyCoffee() {
             value={amount}
             onChange={handleChangeAmount}
           />
-          {/* <div className="absolute inset-y-0 right-0 flex items-center">
-                        <SelectToken onChange={setSelectedToken} />
-                    </div> */}
+          <div className="absolute inset-y-0 right-0 flex items-center">
+            <SelectToken onChange={setSelectedToken} />
+          </div>
         </div>
         {/* <div className='text-xs text-gray-400 text-right cursor-pointer'>
                     <Balance token={selectedToken} onClick={setAmount} />
