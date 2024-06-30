@@ -22,6 +22,7 @@ import {
   RangeSliderFilledTrack,
   RangeSliderThumb,
   HStack,
+  Button,
 } from "@chakra-ui/react";
 import { useUserContext } from "../components/UserContext";
 import { DeviceListing } from "../utils/deviceHelpers";
@@ -50,6 +51,12 @@ export default function Buy() {
   const uniqueLocations = Array.from(
     new Set(listings.map((listing) => listing.location))
   );
+
+  const buyItem = () => {
+    alert(
+      `You have received ${selectedListing?.b3tr_reward} B3TR tokens for buying the ${selectedListing?.name}! \n\nThank you for preventing more devices from going to landfills. 🌍🔋♻️`
+    );
+  };
 
   useEffect(() => {
     filterListings();
@@ -197,8 +204,8 @@ export default function Buy() {
             <ModalCloseButton />
             <ModalBody>
               {selectedListing && (
-                <VStack align="start" spacing={4}>
-                  <Box display="flex" overflowX="auto" width="100%">
+                <VStack align="start" spacing={1} >
+                  <Box display="flex" overflowX="auto" width="100%" style={{marginBottom: 10}}>
                     {selectedListing.imageLinks.map((link, index) => (
                       <Image
                         key={index}
@@ -210,15 +217,18 @@ export default function Buy() {
                       />
                     ))}
                   </Box>
+                  <Text>Description: {selectedListing.description}</Text>
                   <Text>Price: ${selectedListing.price}</Text>
                   <Text>Condition: {selectedListing.condition}</Text>
                   <Text>Model: {selectedListing.model}</Text>
                   <Text>Quality: {selectedListing.quality}</Text>
                   <Text>Location: {selectedListing.location}</Text>
-                  <Text>Description: {selectedListing.description}</Text>
                   <Text fontWeight="bold" color="green.600">
                     B3TR Reward: {selectedListing.b3tr_reward}
                   </Text>
+                  <HStack style={{marginBottom: 10}}>
+                    <Button onClick={() => buyItem()}>Buy</Button>
+                  </HStack>
                 </VStack>
               )}
             </ModalBody>
