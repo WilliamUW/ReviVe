@@ -71,7 +71,7 @@ export default function UnusedElectronic() {
     setDeviceInfo((prev) => (prev ? { ...prev, [name]: value } : null));
   };
 
-  const listItem = () => {
+  const listItem = async () => {
     if (deviceInfo) {
       setItems((prevItems) => [...prevItems, deviceInfo]);
       setDeviceInfo(null);
@@ -83,6 +83,8 @@ export default function UnusedElectronic() {
     }
     navigate("/buy");
   };
+
+  
 
   return (
     <Box minHeight="100vh" padding={4}>
