@@ -1,8 +1,10 @@
 import { Flex, Container } from "@chakra-ui/react";
 import { InfoCard, Instructions, Footer, Dropzone } from "../components";
+import BuyCoffee from "./BuyCoffee";
 
 const About = () => (
   <>
+    <BuyCoffee />
     <Flex flex={1}>
       <Container
         mt={{ base: 4, md: 10 }}
