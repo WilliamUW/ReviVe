@@ -1,7 +1,7 @@
 import React from "react";
 import { useWallet, useConnex } from "@vechain/dapp-kit-react";
 import { clauseBuilder, unitsUtils } from "@vechain/sdk-core";
-import {Button} from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 
 interface SendTransactionProps {
   recipientAddress: string;
@@ -16,10 +16,16 @@ export default function SendTransaction({
   tokenAddress,
   amount,
   buttonText,
-  decimals = 18
+  decimals = 18,
 }: SendTransactionProps) {
   const { account } = useWallet();
   const connex = useConnex();
+
+  // const buyItem = () => {
+  //   alert(
+  //     `You have received ${selectedListing?.b3tr_reward} B3TR tokens for buying the ${selectedListing?.name}! \n\nThank you for preventing more devices from going to landfills. 🌍🔋♻️`
+  //   );
+  // };
 
   const [txId, setTxId] = React.useState<string>("");
   const [error, setError] = React.useState<string>("");
@@ -42,15 +48,13 @@ export default function SendTransaction({
               )
             : clauseBuilder.transferVET(
                 recipientAddress,
-                unitsUtils.parseVET(amount)
+                unitsUtils.parseVET(amount.toString())
               )),
-          comment: `Send ${amount} ${tokenAddress ? 'tokens' : 'VET'}`,
+          comment: `Send ${amount} ${tokenAddress ? "tokens" : "VET"}`,
         },
       ];
 
-      const tx = connex.vendor
-        .sign("tx", clauses)
-        .signer(account);
+      const tx = connex.vendor.sign("tx", clauses).signer(account);
 
       const { txid } = await tx.request();
       setTxId(txid);

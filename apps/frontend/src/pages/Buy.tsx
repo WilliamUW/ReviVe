@@ -22,11 +22,9 @@ import {
   RangeSliderFilledTrack,
   RangeSliderThumb,
   HStack,
-  Button,
 } from "@chakra-ui/react";
 import { useUserContext } from "../components/UserContext";
 import { DeviceListing } from "../utils/deviceHelpers";
-import SendTransaction from "./SendTransaction";
 import BuyCoffee from "./BuyCoffee";
 
 export default function Buy() {
@@ -53,12 +51,6 @@ export default function Buy() {
   const uniqueLocations = Array.from(
     new Set(listings.map((listing) => listing.location))
   );
-
-  const buyItem = () => {
-    alert(
-      `You have received ${selectedListing?.b3tr_reward} B3TR tokens for buying the ${selectedListing?.name}! \n\nThank you for preventing more devices from going to landfills. 🌍🔋♻️`
-    );
-  };
 
   useEffect(() => {
     filterListings();
