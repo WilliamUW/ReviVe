@@ -21,11 +21,7 @@ export default function SendTransaction({
   const { account } = useWallet();
   const connex = useConnex();
 
-  // const buyItem = () => {
-  //   alert(
-  //     `You have received ${selectedListing?.b3tr_reward} B3TR tokens for buying the ${selectedListing?.name}! \n\nThank you for preventing more devices from going to landfills. 🌍🔋♻️`
-  //   );
-  // };
+ 
 
   const [txId, setTxId] = React.useState<string>("");
   const [error, setError] = React.useState<string>("");

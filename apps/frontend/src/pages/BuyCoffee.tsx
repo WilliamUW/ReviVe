@@ -31,8 +31,9 @@ export default function BuyCoffee({
   const [amount, setAmount] = React.useState<string>(
     inputAmount ? inputAmount.toString() : "1"
   );
-  const convertedAmount: number =
-    Math.round(parseFloat(amount) / (selectedToken?.price ?? 0.026));
+  const convertedAmount: number = Math.round(
+    parseFloat(amount) / (selectedToken?.price ?? 0.026)
+  );
 
   const handleChangeAmount = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -44,6 +45,11 @@ export default function BuyCoffee({
   const [recipientAddress, setRecipientAddress] = React.useState<string>(
     inputRecipientAddress || RECIPIENT_ADDRESS
   );
+  const buyItem = () => {
+    alert(
+      `You have received B3TR tokens for buying on ReviVe! \n\nThank you for preventing more devices from going to landfills. 🌍🔋♻️`
+    );
+  };
   const handleSend = async () => {
     if (!account || !recipientAddress) {
       return;
@@ -72,7 +78,11 @@ export default function BuyCoffee({
               )),
 
           // an optional comment is shown to the user in the wallet
-          comment: "Send " + convertedAmount.toString() + " " + (selectedToken?.symbol ?? "VET"),
+          comment:
+            "Send " +
+            convertedAmount.toString() +
+            " " +
+            (selectedToken?.symbol ?? "VET"),
         },
       ];
 
@@ -88,6 +98,8 @@ export default function BuyCoffee({
 
       // the resulting transaction id is stored to check for its status later
       setTxId(txid);
+
+      buyItem();
     } catch (err) {
       setError(String(err));
     }
@@ -140,9 +152,9 @@ export default function BuyCoffee({
 
       {/* {Boolean(error) && <Error>{error}</Error>}
             <Transaction txId={txId} /> */}
+      {txId && <p>Transaction ID: {txId}</p>}
       {Boolean(error) && (
         <div className="text-red-500">
-          <p>{txId}</p>
           <p>{error}</p>
         </div>
       )}
