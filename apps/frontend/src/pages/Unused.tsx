@@ -80,8 +80,8 @@ export default function UnusedElectronic() {
       alert(
         `You have received ${deviceInfo?.b3tr_reward} B3TR tokens for listing your ${deviceInfo?.name}! \n\n Thank you for preventing more devices from going to landfills. 🌍🔋♻️`
       );
-      navigate("/buy");
     }
+    navigate("/buy");
   };
 
   return (

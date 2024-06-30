@@ -112,8 +112,8 @@ export default function BrokenElectronic() {
       setImage(null);
       console.log("Listing broken item:", deviceInfo);
 
-      navigate("/unused");
     }
+    navigate("/unused");
   };
 
   const itemIsFixed = () => {
