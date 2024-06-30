@@ -226,7 +226,7 @@ export default function Buy() {
                   <Text fontWeight="bold" color="green.600">
                     B3TR Reward: {selectedListing.b3tr_reward}
                   </Text>
-                  <HStack>
+                  <HStack style={{marginBottom: 10}}>
                     <Button onClick={() => buyItem()}>Buy</Button>
                   </HStack>
                 </VStack>
