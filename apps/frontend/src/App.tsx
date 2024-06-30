@@ -26,7 +26,6 @@ function App() {
             nodeUrl="https://testnet.vechain.org/"
             logLevel={"DEBUG"}
           >
-            <About />
             {/* <BottomNavbar /> */}
             <Navbar />
 
