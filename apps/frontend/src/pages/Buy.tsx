@@ -204,8 +204,8 @@ export default function Buy() {
             <ModalCloseButton />
             <ModalBody>
               {selectedListing && (
-                <VStack align="start" spacing={2}>
-                  <Box display="flex" overflowX="auto" width="100%">
+                <VStack align="start" spacing={1} >
+                  <Box display="flex" overflowX="auto" width="100%" style={{marginBottom: 10}}>
                     {selectedListing.imageLinks.map((link, index) => (
                       <Image
                         key={index}
