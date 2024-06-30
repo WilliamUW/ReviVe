@@ -56,16 +56,14 @@ export const Dropzone = () => {
       const resizedBlob = await resizeImage(file);
       const base64Image = await blobToBase64(resizedBlob as Blob);
 
-      // const captcha = await handleCaptchaVerify();
+      const captcha = await handleCaptchaVerify();
 
-      // if (!captcha) {
-      //   alert("Captcha failed, please try again");
-      //   return;
-      // }
+      if (!captcha) {
+        alert("Captcha failed, please try again");
+        return;
+      }
 
       const deviceID = await getDeviceId();
-
-      const captcha = ""
 
       try {
         const response = await submitReceipt({

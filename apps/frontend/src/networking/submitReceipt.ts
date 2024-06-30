@@ -13,6 +13,7 @@ export const submitReceipt = async (
   data: ReceiptData
 ): Promise<Response> => {
   try {
+    console.log(data)
     const response = await axios.post(
       `${backendURL}/submitReceipt`, 
       data
