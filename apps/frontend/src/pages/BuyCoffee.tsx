@@ -27,7 +27,7 @@ export default function BuyCoffee() {
   const [recipientAddress, setRecipientAddress] =
     React.useState<string>(RECIPIENT_ADDRESS);
   const handleSend = async () => {
-    if (!account || !RECIPIENT_ADDRESS) {
+    if (!account || !recipientAddress) {
       return;
     }
 
