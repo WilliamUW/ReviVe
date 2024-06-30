@@ -10,21 +10,21 @@ import { TransactionHandler, clauseBuilder, coder } from '@vechain/sdk-core';
 @Service()
 export class ContractsService {
   public async registerSubmission(submission: Submission): Promise<void> {
-    const clause = clauseBuilder.functionInteraction(
-      config.CONTRACT_ADDRESS,
-      coder.createInterface(EcoEarnABI).getFunction('registerValidSubmission'),
-      [submission.address, `0x${ethers.parseEther(REWARD_AMOUNT).toString(16)}`],
-    );
+    // const clause = clauseBuilder.functionInteraction(
+    //   config.CONTRACT_ADDRESS,
+    //   coder.createInterface(EcoEarnABI).getFunction('registerValidSubmission'),
+    //   [submission.address, `0x${ethers.parseEther(REWARD_AMOUNT).toString(16)}`],
+    // );
 
-    const gasResult = await thor.gas.estimateGas([clause], ADMIN_ADDRESS);
+    // const gasResult = await thor.gas.estimateGas([clause], ADMIN_ADDRESS);
 
-    if (gasResult.reverted === true) throw new HttpException(500, `EcoEarn: Internal server error: ${gasResult.revertReasons}`);
+    // if (gasResult.reverted === true) throw new HttpException(500, `EcoEarn: Internal server error: ${gasResult.revertReasons}`);
 
-    const txBody = await thor.transactions.buildTransactionBody([clause], gasResult.totalGas);
+    // const txBody = await thor.transactions.buildTransactionBody([clause], gasResult.totalGas);
 
-    const signedTx = TransactionHandler.sign(txBody, Buffer.from(ADMIN_PRIVATE_KEY));
+    // const signedTx = TransactionHandler.sign(txBody, Buffer.from(ADMIN_PRIVATE_KEY));
 
-    await thor.transactions.sendTransaction(signedTx);
+    // await thor.transactions.sendTransaction(signedTx);
   }
 
   public async validateSubmission(submission: Submission): Promise<void> {
